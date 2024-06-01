@@ -1,63 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Os Três Notetas</title>
-    <link rel="stylesheet" href="assets/style.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-
-  <body>
-    <header>
-      <div class="btn-entrar">
-        <nav>
-          <ul>
-            <li class="nav-entrar"><a href="#">entrar</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div id="divBuscar">
-        <input
-          type="text"
-          id="txtBusca"
-          placeholder="O que voce quer ouvir agora?"
-        />
-        <button id="btnBusca">Buscar</button>
-      </div>
-    </header>
-     
-        <section>
-          <h2 class="">Músicas e Artistas mais ouvidos</h2>
-          <div>
-            <nav class="nav-opcoes">
-              <div class="div-opcoes">
-                  <ul>
-                      <li>
-                          <button class="btn-opcoes">TODOS</button>
-                      </li>
-                  </ul>
-              </div>
-              <div class="div-opcoes">
-                  <nav class="nav-opcoes"> 
-                      <ul>
-                          <li>
-                              <button class="btn-opcoes">POP</button>
-                          </li>
-                      </ul>
-                  </nav>
-              </div>
-              <div class="div-opcoes">
-                  <nav class="nav-opcoes">
-                      <ul>
-                          <li>
-                              <button class="btn-opcoes">ROCK</button>
-                          </li>
-                      </ul>
-                  </nav>
-              </div>
-          </nav>
-        </section>
-      
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Playlist</h1>
+        <table id="playlistTable">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Artista</th>
+                    <th>Duração</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Conteúdo gerado dinamicamente -->
+            </tbody>
+        </table>
+        <div class="controls">
+            <label for="sortBy">Ordenar por:</label>
+            <select id="sortBy">
+                <option value="titulo">Título</option>
+                <option value="artista">Artista</option>
+                <option value="duracao">Duração</option>
+            </select>
+            <button onclick="sortPlaylist()">Ordenar</button>
+        </div>
+    </div>
+    
+    
+</body>
 </html>
